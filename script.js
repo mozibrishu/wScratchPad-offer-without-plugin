@@ -1,6 +1,6 @@
 var canvas = document.getElementById("myCanvas");
 var context = canvas.getContext("2d");
-context.fillStyle = "#FF0000";
+context.fillStyle = "#ababab";
 checker = 1;
 context.fillRect(0, 0, 200, 150);
 totalPixelS = 30000;
@@ -81,7 +81,7 @@ function checkPercentage() {
             x=i;y=j;
             const pixel = context.getImageData(x, y, 1, 1);
             const data = pixel.data;
-            if (data[0] == 255){
+            if (data[0] == 171){
                 count++;
             }
         }
