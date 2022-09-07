@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 300px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 300px;
+  height: 250px;
+  background-color: antiquewhite;
+}
+
+#scratchText {
+  position: absolute;
+  top: 0px;
+  font-size: 20px;
+  left: 63px;
+  font-weight: 900;
+  color: red;
+}
+
+#offerText {
+  position: absolute;
+  top: 21px;
+  font-size: 20px;
+  left: 100px;
+  font-weight: 900;
+  color: #ff5722;
+}
+
+.barSmall {
+  top: 220px;
+  left: 70px;
+}
+
+.pointerSmall {
+  top: 220px;
+  left: 70px;
+  transition: all .2s;
+}
+
+#elem {
+  top: 50px;
+  left: 50px;
+  height: 150px;
+  width: 200px;
+}
+
+#elem canvas {
+  /* background-image: url(images/darkGrayEd.png); */
+  transition: opacity 2s;
+}
+
+/* Utility */
+.absolute {
+  position: absolute;
+}
+
+.hidden {
+  display: none;
+}
+
+.fadeOut-animation {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+  }
+}
+
+.elemIMG {
+  position: absolute;
+  width: 300px !important;
+  height: 250px !important;
+  /* top: -35px;
+  left: -50px; */
+  transform: translate(-50px, -55px);
+  transition: all 2s;
+}

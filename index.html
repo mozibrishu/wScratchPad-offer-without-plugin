@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratching Offer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="wScratchPad.min.js"></script> -->
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="offerText">
+            <span id="scratchText">স্ক্র্যাচ করুন</span>
+            <span id="offerText"><i>অফার দেখুন</i></span>
+        </div>
+        <div id="elem" class="absolute" style="cursor: crosshair;">
+            <img src="images/offerMain.jpg" crossorigin="" style="position: absolute; width: 100%; height: 100%;" class="">
+            <canvas style="position: absolute; width: 100%; height: 100%;" width="200" height="150" id="myCanvas" onclick="erase()"></canvas>
+        </div>
+
+        <div class="barSmall absolute"><img src="images/barSmall.png" alt="" srcset=""></div>
+        <div class="pointerSmall absolute">
+            <img src="images/pointerSmall.png" alt="" srcset="">
+        </div>
+    </div>
+
+    <script src="scriptCheck.js"></script>
+</body>
+
+</html>
