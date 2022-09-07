@@ -28,6 +28,7 @@ const startDrawing = (event) => {
     isDrawing = true
     erase();
     context.beginPath()
+    event = event.touches[0] || window.event;
     context.moveTo(event.clientX - 50, event.clientY - 50)
     checkPercentage();
     myInterval = setInterval(() => {
@@ -40,6 +41,7 @@ const stopDrawing = () => {
 }
 const draw = (event) => {
     if (!isDrawing) return
+    event = event.touches[0] || window.event;
     context.lineTo(event.clientX - 50, event.clientY - 50)
     context.stroke()
     if(percentage> 35 && checker){
@@ -68,6 +70,12 @@ const enterCanvas = (event) => {
 canvas.addEventListener("mousedown", startDrawing)
 canvas.addEventListener("mouseup", stopDrawing)
 canvas.addEventListener("mousemove", draw)
+canvas.addEventListener("mouseover", enterCanvas)
+
+//
+canvas.addEventListener("touchstart", startDrawing)
+canvas.addEventListener("touchend", stopDrawing)
+canvas.addEventListener("touchmove", draw)
 canvas.addEventListener("mouseover", enterCanvas)
 
 // setInterval(() => {
