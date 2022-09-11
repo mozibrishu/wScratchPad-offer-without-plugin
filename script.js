@@ -28,7 +28,13 @@ const startDrawing = (event) => {
     isDrawing = true
     erase();
     context.beginPath()
-    event = event.touches[0] || window.event;
+    if (typeof window.orientation !== 'undefined') {
+        console.log("Touch");
+        event = event.touches[0] || window.event;
+    }
+    else {
+        event = event || window.event;
+    }
     context.moveTo(event.clientX - 50, event.clientY - 50)
     checkPercentage();
     myInterval = setInterval(() => {
@@ -41,7 +47,15 @@ const stopDrawing = () => {
 }
 const draw = (event) => {
     if (!isDrawing) return
-    event = event.touches[0] || window.event;
+
+    if (typeof window.orientation !== 'undefined') {
+        console.log("Touch");
+        event = event.touches[0] || window.event;
+    }
+    else {
+        event = event || window.event;
+    }
+    
     context.lineTo(event.clientX - 50, event.clientY - 50)
     context.stroke()
     if(percentage> 35 && checker){
