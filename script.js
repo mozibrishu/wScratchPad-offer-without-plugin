@@ -27,13 +27,13 @@ let isDrawing = false
 const startDrawing = (event) => {
     isDrawing = true
     erase();
-    context.beginPath()
     if (typeof window.orientation !== 'undefined') {
         event = event.touches[0] || window.event;
     }
     else {
         event = event || window.event;
     }
+    context.beginPath()
     context.moveTo(event.clientX - 50, event.clientY - 50)
     checkPercentage();
     myInterval = setInterval(() => {
