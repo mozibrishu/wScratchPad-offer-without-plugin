@@ -29,7 +29,6 @@ const startDrawing = (event) => {
     erase();
     context.beginPath()
     if (typeof window.orientation !== 'undefined') {
-        console.log("Touch");
         event = event.touches[0] || window.event;
     }
     else {
@@ -49,7 +48,6 @@ const draw = (event) => {
     if (!isDrawing) return
 
     if (typeof window.orientation !== 'undefined') {
-        console.log("Touch");
         event = event.touches[0] || window.event;
     }
     else {
